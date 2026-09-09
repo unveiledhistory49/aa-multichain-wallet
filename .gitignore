@@ -1,45 +1,69 @@
 # Dependencies
-node_modules
+node_modules/
 .pnp
 .pnp.js
+.yarn/*
 
-# Testing
-coverage
+# Build outputs (TypeScript / Node)
+dist/
+build/
+out/
+*.tsbuildinfo
+next-env.d.ts
+*.tgz
+
+# Testing / coverage
+coverage/
+.nyc_output/
 
 # Next.js
 .next/
 out/
 build/
 
-# Foundry
+# Turbo
+.turbo/
+
+# Vercel
+.vercel/
+
+# Foundry (EVM contracts)
 out/
 cache/
 packages/contracts-evm/lib/
 broadcast/
 
-# Anchor
+# Anchor / Solana
 target/
 .anchor/
 test-ledger/
-
-# Misc
-.DS_Store
-*.pem
+**/*.rs.bk
 
 # Environment
 .env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
+.env*
+!.env.example
+*.local
 
-# Debug
+# Logs
+*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+.pnpm-debug.log*
+logs/
 
-# Turbo
-.turbo
+# OS / editor
+.DS_Store
+Thumbs.db
+*.pem
+.vscode/
+.idea/
+*.swp
+*.swo
 
+# Misc dev artifacts
 .gemini/
 gha-creds-*.json
+*.tmp
+*.temp
